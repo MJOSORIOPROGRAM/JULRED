@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="images/logo JULRED.jpeg">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <title>Contexto Energético</title>
+    </head>
+
+    <body>
+        <div class="container-fluid m-auto">
+            <!-- barra de navegacion -->
+            <nav class="navbar navbar-expand-lg custom-navbar">
+                <div class="container-fluid">
+                    <a href="index.html"><img src="images/logo JULRED.jpeg"
+                            alt="logo" width="90px" height="82px"
+                            style="border-radius: 50%; margin-right: 20px;"></a>
+                    <div class="d-lg-none text-center top-50 ">
+                        <span class="fw-bold fs-4">Contexto Energético</span>
+                    </div>
+                    <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse"
+                        id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                    href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active"
+                                    href="contexto.html">Contexto Energético</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active"
+                                    href="colombia.html">Colombia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active"
+                                    href="latam.html">Latam</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active"
+                                    href="mundo.html">Colombia en el mundo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active"
+                                    href="evaluate.html">Evaluate</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active"
+                                    href="infografia.html">Infografía</a>
+                            </li>
+                        </ul>
+
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search"
+                                placeholder="Busca una palabra clave"
+                                aria-label="Search">
+                            <button class="btn btn-outline-success"
+                                type="submit"
+                                style="background-color: #96ad71;">Buscar</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="content-card mt-5">
+                <div class="card-flip">
+                    <div class="card">
+                        <div class="card-delantera"
+                            style="background-image: url(images/imagen5.jpg);">
+                            <div class="bg"></div>
+                            <div class="contenido-card-delantera">
+                                <h1>ENERGÍA SOLAR</h1>
+                            </div>
+                        </div>
+
+                        <div class="card-atras">
+                            <div class="contenido-card-atras">
+                                <h1
+                                    class="text-center rounded-3 mt-2  fw-bold"
+                                    style="background-color: #fffbde; color: #96ad71; font-family: Inter;">
+                                    ENERGÍA SOLAR</h1>
+                                <p class="mt-2 fw-bold"
+                                    style="font-family: Roboto Mono;">Energía
+                                    que se
+                                    obtiene a partir de tecnologías que
+                                    convierten la luz solar en energía
+                                    eléctrica, ya sea mediante paneles
+                                    fotovoltaicos o a través de espejos que
+                                    concentran la radiación solar. Las
+                                    tecnologías solares pueden producir calor,
+                                    refrigeración, luz natural y
+                                    electricidad.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-flip ">
+                    <div class="card">
+                        <div class="card-delantera"
+                            style="background-image: url(images/imagen4.jpg);">
+                            <div class="bg"></div>
+                            <div class="contenido-card-delantera">
+                                <h1>ENERGÍA EÓLICA</h1>
+                            </div>
+                        </div>
+
+                        <div class="card-atras">
+                            <div class="contenido-card-atras">
+                                <h1
+                                    class="text-center rounded-3 mt-2  fw-bold"
+                                    style="background-color: #fffbde; color: #96ad71; font-family: Inter;">ENERGÍA
+                                    EÓLICA</h1>
+                                <p class="mt-2 fw-bold"
+                                    style="font-family: Roboto Mono;">La energía
+                                    eólica aprovecha la energía
+                                    del aire en movimiento gracias al
+                                    uso de enormes turbinas eólicas ubicadas en
+                                    superficies terrestres, en alta mar o en
+                                    aguas dulces.
+                                    La energía eólica ha evolucionado en las
+                                    últimas décadas hasta convertirse en
+                                    una potente forma de producir
+                                    electricidad.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-flip">
+                    <div class="card">
+                        <div class="card-delantera"
+                            style="background-image: url(images/imagen3.jpg);">
+                            <div class="bg"></div>
+                            <div class="contenido-card-delantera">
+                                <h1>ENERGÍA HIDROELÉCTRICA</h1>
+                            </div>
+                        </div>
+
+                        <div class="card-atras">
+                            <div class="contenido-card-atras">
+                                <h1
+                                    class="text-center rounded-3 mt-2  fw-bold "
+                                    style="background-color: #fffbde; color: #96ad71; font-family: Inter;">
+                                    HIDROELÉCTRICA</h1>
+                                <p class="mt-2 fw-bold"
+                                    style="font-family: Roboto Mono;">La energía
+                                    hidroeléctrica puede generarse a
+                                    partir de embalses y ríos.Los embalses
+                                    hidroeléctricos suelen tener múltiples
+                                    aplicaciones, llegando a producir agua
+                                    potable, agua para regadíos, un control ante
+                                    inundaciones y sequías, servicios de
+                                    navegación y también este suministro de
+                                    energía que indicamos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="content-card mt-5">
+                <div class="card-flip">
+                    <div class="card">
+                        <div class="card-delantera"
+                            style="background-image: url(images/imagen5.jpg);">
+                            <div class="bg"></div>
+                            <div class="contenido-card-delantera">
+                                <h1>ENERGÍA GEOTÉRMICA</h1>
+                            </div>
+                        </div>
+
+                        <div class="card-atras">
+                            <div class="contenido-card-atras">
+                                <h1
+                                    class="text-center rounded-3 mt-2  fw-bold titulo"
+                                    style="background-color: #fffbde; color: #96ad71; font-family: Inter;">ENERGÍA
+                                    GEOTÉRMICA</h1>
+                                <p class="mt-2 fw-bold"
+                                    style="font-family: Roboto Mono;">La energía
+                                    geotérmica utiliza la energía
+                                    térmica disponible del interior de la
+                                    Tierra. El calor se extrae de unos depósitos
+                                    geotérmicos a través de pozos u otros
+                                    medios. Una vez en la superficie, pueden
+                                    utilizarse fluidos a varias temperaturas
+                                    para generar la electricidad. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-flip">
+                    <div class="card">
+                        <div class="card-delantera"
+                            style="background-image: url(images/imagen4.jpg);">
+                            <div class="bg"></div>
+                            <div class="contenido-card-delantera">
+                                <h1>ENERGÍA OCEÁNICA</h1>
+                            </div>
+                        </div>
+
+                        <div class="card-atras">
+                            <div class="contenido-card-atras">
+                                <h1
+                                    class="text-center rounded-3 mt-2  fw-bold "
+                                    style="background-color: #fffbde; color: #96ad71; font-family: Inter;">ENERGÍA
+                                    OCEÁNICA</h1>
+                                <p class="mt-2 fw-bold"
+                                    style="font-family: Roboto Mono;">La energía
+                                    oceánica deriva de las tecnologías
+                                    que utilizan las energías térmicas del agua
+                                    marina, las olas o las corrientes de agua,
+                                    por ejemplo, para producir electricidad o
+                                    calor. El potencial teórico de la energía
+                                    oceánica supera cualquier necesidad
+                                    energética actual en los seres humanos.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-flip">
+                    <div class="card">
+                        <div class="card-delantera"
+                            style="background-image: url(images/imagen3.jpg);">
+                            <div class="bg"></div>
+                            <div class="contenido-card-delantera">
+                                <h1>ENERGÍA DE BIOMASA</h1>
+                            </div>
+                        </div>
+
+                        <div class="card-atras">
+                            <div class="contenido-card-atras">
+                                <h1
+                                    class="text-center rounded-3 mt-2  fw-bold titulo"
+                                    style="background-color: #fffbde; color: #96ad71; font-family: Inter;">ENERGÍA
+                                    DE BIOMASA</h1>
+                                <p class="mt-2 fw-bold"
+                                    style="font-family: Roboto Mono;">La
+                                    bioenergía se produce a partir de diversos
+                                    materiales orgánicos, denominados biomasa,
+                                    como la madera, el carbón, el estiércol y
+                                    otros abonos utilizados para la producción
+                                    de calor y electricidad, y los cultivos
+                                    agrícolas destinados a biocombustibles
+                                    líquidos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container mt-5">
+                    <h2 class=" tituloGrafica text-center mb-4">Comparativa de tipos de
+                        energías</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <canvas id="graficaBarras"></canvas>
+                        </div>
+                        <div class="col-md-6">
+                            <canvas id="graficaPastel"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button onclick="scrollToTop()" id="scrollToTopBtn" title="Subir">
+                ↑
+            </button>
+
+            <nav aria-label="Paginador de secciones" style="margin-top: 49px;">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="page-item"><a class="page-link"
+                            href="contexto.html">1</a></li>
+                    <li class="page-item"><a class="page-link"
+                            href="colombia.html">2</a></li>
+                    <li class="page-item"><a class="page-link"
+                            href="latam.html">3</a></li>
+                    <li class="page-item"><a class="page-link"
+                            href="mundo.html">4</a></li>
+                    <li class="page-item"><a class="page-link"
+                            href="evaluate.html">5</a></li>
+                    <li class="page-item"><a class="page-link"
+                            href="infografia.html">6</a></li>
+                </ul>
+            </nav>
+
+            <footer class="position-relative  text-white py-4 mt-4"
+        style="background-color: #1a2913;">
+        <div
+          class="particles-container position-absolute top-0 start-0 w-100 h-100"></div>
+        <div class="container position-relative z-1 text-center">
+          <h5>JULRED - Siguenos</h5>
+
+          <a href="https://wa.me/1234567890" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-whatsapp mt-2 mb-3"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <a href="https://www.facebook.com/tuusuario" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-facebook"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <a href="https://www.instagram.com/tuusuario" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-instagram"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <a href="https://twitter.com/tuusuario" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-x-twitter"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <p class="mb-0">© 2025 Todos los derechos reservados.</p>
+          <p>Desarrollado con 💻 por Laura Agudelo - Martin Osorio - Laura
+            Bermudez</p>
+        </div>
+      </footer>
+
+        </div>
+
+          <script>
+  const container = document.querySelector('.particles-container');
+  for (let i = 0; i < 80; i++) {
+    const particle = document.createElement('div');
+    particle.style.left = `${Math.random() * 100}%`;
+    particle.style.animationDuration = `${8 + Math.random() * 6}s`;
+    particle.style.animationDelay = `${Math.random() * 5}s`;
+    container.appendChild(particle);
+  }
+</script>
+
+        <script>
+        // Mostrar/ocultar el botón
+        window.onscroll = function () {
+            const btn = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        // Función para subir
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+    </script>
+
+        <script>
+        const datosEnergia = {
+            labels: ['Solar', 'Eólica', 'Hidroeléctrica', 'Carbón', 'Gas Natural', 'Petróleo'],
+            datasets: [{
+                label: 'Producción Energética (TWh)',
+                data: [400, 350, 600, 900, 700, 850],
+                backgroundColor: [
+                    '#8FA663', // Solar
+                    '#A9BE82', // Eólica 
+                    '#BBD39C', // Hidroeléctrica
+                    '#D3D3D3', // Carbón 
+                    '#AAAAAA', // Gas Natural 
+                    '#666666'  // Petróleo 
+                ],
+                borderColor: [
+                    '#6F854A', // Solar
+                    '#90A25E', // Eólica
+                    '#A5BD88', // Hidroeléctrica
+                    '#C0C0C0', // Carbón
+                    '#999999', // Gas Natural
+                    '#444444'  // Petróleo
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        const configBarras = {
+            type: 'bar',
+            data: datosEnergia,
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Producción por tipo de energía',
+                        color: '#2E6B31',
+                        font: {
+                            size: 18
+                        }
+                    },
+                    legend: {
+                        labels: {
+                            color: '#2E6B31'
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: { color: '#2E6B31' },
+                        grid: { color: '#DCDCDC' }
+                    },
+                    y: {
+                        ticks: { color: '#2E6B31' },
+                        grid: { color: '#DCDCDC' }
+                    }
+                }
+            }
+        };
+
+        const configPastel = {
+            type: 'pie',
+            data: datosEnergia,
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Distribución porcentual por tipo de energía',
+                        color: '#2E6B31',
+                        font: {
+                            size: 18
+                        }
+                    },
+                    legend: {
+                        labels: {
+                            color: '#2E6B31'
+                        }
+                    }
+                }
+            }
+        };
+
+        new Chart(document.getElementById('graficaBarras'), configBarras);
+        new Chart(document.getElementById('graficaPastel'), configPastel);
+    </script>
+
+        <script>
+        // Función para calcular la distancia Levenshtein entre dos cadenas
+        function levenshtein(a, b) {
+            const matrix = Array.from({ length: b.length + 1 }, (_, i) => [i]);
+            for (let i = 0; i <= a.length; i++) matrix[0][i] = i;
+
+            for (let i = 1; i <= b.length; i++) {
+                for (let j = 1; j <= a.length; j++) {
+                    const cost = a[j - 1] === b[i - 1] ? 0 : 1;
+                    matrix[i][j] = Math.min(
+                        matrix[i - 1][j] + 1,       // eliminación
+                        matrix[i][j - 1] + 1,       // inserción
+                        matrix[i - 1][j - 1] + cost // sustitución
+                    );
+                }
+            }
+            return matrix[b.length][a.length];
+        }
+
+        const form = document.querySelector("form");
+        const input = document.querySelector("input[type='search']");
+        const content = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const searchTerm = input.value.trim().toLowerCase();
+
+            // Limpiar resaltados anteriores
+            content.forEach(el => {
+                el.innerHTML = el.innerText;
+            });
+
+            if (searchTerm === "") return;
+
+            let firstMatch = null;
+
+            content.forEach(el => {
+                const words = el.innerText.split(/\s+/);
+                let found = false;
+
+                words.forEach((word, index) => {
+                    const cleanedWord = word.toLowerCase().replace(/[^a-z0-9áéíóúüñ]/gi, '');
+                    const distance = levenshtein(searchTerm, cleanedWord);
+
+                    if (!found && distance <= 2) { // tolerancia de hasta 2 errores
+                        const originalWord = words[index];
+                        words[index] = `<span class="highlight">${originalWord}</span>`;
+                        found = true;
+                    }
+                });
+
+                if (found) {
+                    el.innerHTML = words.join(" ");
+                    if (!firstMatch) firstMatch = el;
+                }
+            });
+
+            if (firstMatch) {
+                firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
+
+                setTimeout(() => {
+                    content.forEach(el => {
+                        el.innerHTML = el.innerText;
+                    });
+                }, 5000);
+            }
+        });
+    </script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+            crossorigin="anonymous"></script>
+
+    </body>
+
+</html>

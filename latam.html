@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo JULRED.jpeg">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>Latam</title>
+  </head>
+  <body>
+    <div class="container-fluid m-auto">
+      <!-- barra de navegacion -->
+      <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid">
+          <a href="index.html"><img src="images/logo JULRED.jpeg" alt="logo"
+              width="90px"
+              height="82px"
+              style="border-radius: 50%; margin-right: 20px;"></a>
+          <div class="d-lg-none text-center top-50 ">
+            <span class="fw-bold fs-4">Latam</span>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page"
+                  href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="contexto.html">Contexto
+                  Energético</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="colombia.html">Colombia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="latam.html">Latam</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="mundo.html">Colombia en el
+                  mundo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="evaluate.html">Evaluate</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="infografia.html">Infografía</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search"
+                placeholder="Busca una palabra clave" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit"
+                style="background-color: #96ad71;">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <video autoplay muted loop playsinline
+        style="width: 100%; height: 40rem; object-fit: cover;">
+        <source src="video/git3.mp4" type="video/mp4">
+      </video>
+      <div class="container" id="garficacotr">
+        <!-- Gráfico de barras: Consumo de energía en LatAm -->
+        <div class="container">
+          <h2 class="tituloGrafica mb-4">Consumo de Energía en LatAm</h2>
+          <canvas id="latamEnergyChart"></canvas>
+        </div>
+
+        <!-- Gráfico de pastel: Tipos de energía en LatAm 
+      <div class="container  "id="graficapastel">
+        <canvas id="latamEnergyPieChart" class="small-pie-chart"></canvas>
+      </div>-->
+        <div class="container my-5 text-center" >
+          <h2 class=" tituloGrafica text-center">Empresas energéticas en
+            LatAm</h2>
+          <canvas id="latamEnergyPieChart" width="10" height="10"></canvas>
+        </div>
+      </div>
+      <!---empresas de energias latam-->
+      <div class="announcement-bar">
+        <div class="scroll-container mt-5">
+          <div class="scroll-text">
+            <img src="images/latamLogo1.jpg" alt="latamEmpresa 1" />
+            <img src="images/latamLogo2.jpg" alt="latamEmpresa 2" />
+            <img src="images/latamLogo3.jpg" alt="latamEmpresa 3" />
+            <img src="images/logoLatam5.jpg" alt="latamEmpresa 5" />
+
+          </div>
+        </div>
+      </div>
+      <button onclick="scrollToTop()" id="scrollToTopBtn" title="Subir">
+        ↑
+      </button>
+
+      <nav aria-label="Paginador de secciones" style="margin-top: 49px;">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="index.html">Inicio</a>
+          </li>
+          <li class="page-item"><a class="page-link"
+              href="contexto.html">1</a></li>
+          <li class="page-item"><a class="page-link"
+              href="colombia.html">2</a></li>
+          <li class="page-item"><a class="page-link"
+              href="latam.html">3</a></li>
+          <li class="page-item"><a class="page-link"
+              href="mundo.html">4</a></li>
+          <li class="page-item"><a class="page-link"
+              href="evaluate.html">5</a></li>
+          <li class="page-item"><a class="page-link"
+              href="infografia.html">6</a></li>
+        </ul>
+      </nav>
+
+      <footer class="position-relative  text-white py-4 mt-4"
+        style="background-color: #1a2913;">
+        <div
+          class="particles-container position-absolute top-0 start-0 w-100 h-100"></div>
+        <div class="container position-relative z-1 text-center">
+          <h5>JULRED - Siguenos</h5>
+
+          <a href="https://wa.me/1234567890" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-whatsapp mt-2 mb-3"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <a href="https://www.facebook.com/tuusuario" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-facebook"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <a href="https://www.instagram.com/tuusuario" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-instagram"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <a href="https://twitter.com/tuusuario" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-x-twitter"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <p class="mb-0">© 2025 Todos los derechos reservados.</p>
+          <p>Desarrollado con 💻 por Laura Agudelo - Martin Osorio - Laura
+            Bermudez</p>
+        </div>
+      </footer>
+
+    </div>
+
+    <script>
+  const container = document.querySelector('.particles-container');
+  for (let i = 0; i < 80; i++) {
+    const particle = document.createElement('div');
+    particle.style.left = `${Math.random() * 100}%`;
+    particle.style.animationDuration = `${8 + Math.random() * 6}s`;
+    particle.style.animationDelay = `${Math.random() * 5}s`;
+    container.appendChild(particle);
+  }
+</script>
+
+    <script>
+      // Mostrar/ocultar el botón
+window.onscroll = function() {
+  const btn = document.getElementById("scrollToTopBtn");
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+
+// Función para subir
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+    </script>
+    <script>
+  // Gráfico de barras
+  const ctxLatam = document.getElementById('latamEnergyChart').getContext('2d');
+  const latamEnergyChart = new Chart(ctxLatam, {
+    type: 'bar',
+    data: {
+      labels: ['Brasil', 'México', 'Argentina', 'Chile', 'Colombia', 'Perú'],
+      datasets: [{
+        label: 'Consumo Energético (TWh)',
+        data: [600, 350, 200, 120, 100, 85],
+         backgroundColor: [
+           '#6E907F', // Verde oscuro
+            '#84AC94', // Verde
+            '#A9A9A9', // Gris oscuro
+           '#8FBC8F',
+            '#39AB42'  // Verde claro
+          ],
+       borderColor: '#ffffff',
+          borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+  // Gráfico de pastel
+  const ctxPie = document.getElementById('latamEnergyPieChart').getContext('2d');
+  const latamEnergyPieChart = new Chart(ctxPie, {
+    type: 'pie',
+    data: {
+      labels: ['Hidroeléctrica', 'Solar', 'Eólica', 'Fósiles'],
+      datasets: [{
+        data: [45, 30, 15, 10],
+        backgroundColor: ['#6B8E23', // Verde oliva
+ '#8FBC8F', // Verde medio suave
+  '#A9A9A9', // Gris oscuro
+  '#39AB42',  // Verde claro
+  '#4682B4', // Azul acero
+  '#98FB98' ], // Verde claro paste],
+        borderColor: '#fff',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true
+    }
+  });
+</script>
+
+    <script>
+// Función para calcular la distancia Levenshtein entre dos cadenas
+function levenshtein(a, b) {
+const matrix = Array.from({ length: b.length + 1 }, (_, i) => [i]);
+for (let i = 0; i <= a.length; i++) matrix[0][i] = i;
+
+for (let i = 1; i <= b.length; i++) {
+for (let j = 1; j <= a.length; j++) {
+const cost = a[j - 1] === b[i - 1] ? 0 : 1;
+matrix[i][j] = Math.min(
+matrix[i - 1][j] + 1,       // eliminación
+matrix[i][j - 1] + 1,       // inserción
+matrix[i - 1][j - 1] + cost // sustitución
+);
+}
+}
+return matrix[b.length][a.length];
+}
+
+const form = document.querySelector("form");
+const input = document.querySelector("input[type='search']");
+const content = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6");
+
+form.addEventListener("submit", function (e) {
+e.preventDefault();
+const searchTerm = input.value.trim().toLowerCase();
+
+// Limpiar resaltados anteriores
+content.forEach(el => {
+el.innerHTML = el.innerText;
+});
+
+if (searchTerm === "") return;
+
+let firstMatch = null;
+
+content.forEach(el => {
+const words = el.innerText.split(/\s+/);
+let found = false;
+
+words.forEach((word, index) => {
+const cleanedWord = word.toLowerCase().replace(/[^a-z0-9áéíóúüñ]/gi, '');
+const distance = levenshtein(searchTerm, cleanedWord);
+
+if (!found && distance <= 2) { // tolerancia de hasta 2 errores
+const originalWord = words[index];
+words[index] = `<span class="highlight">${originalWord}</span>`;
+found = true;
+}
+});
+
+if (found) {
+el.innerHTML = words.join(" ");
+if (!firstMatch) firstMatch = el;
+}
+});
+
+if (firstMatch) {
+firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
+
+setTimeout(() => {
+content.forEach(el => {
+el.innerHTML = el.innerText;
+});
+}, 5000);
+}
+});
+</script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"></script>
+
+  </body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo JULRED.jpeg">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Colombia</title>
+  </head>
+  <body>
+    <div class="container-fluid m-auto">
+      <!-- barra de navegacion -->
+      <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid">
+          <a href="index.html"><img src="images/logo JULRED.jpeg" alt="logo"
+              width="90px"
+              height="82px"
+              style="border-radius: 50%; margin-right: 20px;"></a>
+          <div class="d-lg-none text-center top-50 ">
+            <span class="fw-bold fs-4">Colombia</span>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page"
+                  href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="contexto.html">Contexto
+                  Energético</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="colombia.html">Colombia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="latam.html">Latam</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="mundo.html">Colombia en el
+                  mundo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="evaluate.html">Evaluate</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="infografia.html">Infografía</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search"
+                placeholder="Busca una palabra clave" aria-label="Search">
+              <button class="btn btn-outline-success"
+                type="submit" style="background-color: #96ad71;">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <video autoplay muted loop playsinline
+        style="width: 100%; height: 40rem; object-fit: cover;">
+        <source src="video/gif.mp4" type="video/mp4">
+      </video>
+
+      <!-- Título del mapa -->
+      <div class="container-fluid" style>
+        <div class="map-title container mt-5">
+          <h2>Mapa Energético de Colombia
+          </h2>
+        </div>
+
+        <!-- mapa SVG -->
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 md-12 lg-12">
+              <object type="image/svg+xml" data="images/co.svg"
+                id="svg-map"></object>
+              <div id="infoCard" class="info-card">
+                <h5 id="infoTitle"></h5>
+                <p id="infoDesc"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gráfica de uso de energías -->
+        <div class="container my-5">
+          <h3 class="tituloGrafica mb-4">Matriz Energética de Colombia -
+            2024</h3>
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <canvas id="graficoEnergia"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button onclick="scrollToTop()" id="scrollToTopBtn" title="Subir">
+        ↑
+      </button>
+
+      <nav aria-label="Paginador de secciones" style="margin-top: 49px;">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="index.html">Inicio</a>
+          </li>
+          <li class="page-item"><a class="page-link"
+              href="contexto.html">1</a></li>
+          <li class="page-item"><a class="page-link"
+              href="colombia.html">2</a></li>
+          <li class="page-item"><a class="page-link"
+              href="latam.html">3</a></li>
+          <li class="page-item"><a class="page-link"
+              href="mundo.html">4</a></li>
+          <li class="page-item"><a class="page-link"
+              href="evaluate.html">5</a></li>
+          <li class="page-item"><a class="page-link"
+              href="infografia.html">6</a></li>
+        </ul>
+      </nav>
+
+      <footer class="position-relative  text-white py-4 mt-4"
+        style="background-color: #1a2913;">
+        <div
+          class="particles-container position-absolute top-0 start-0 w-100 h-100"></div>
+        <div class="container position-relative z-1 text-center">
+          <h5>JULRED - Siguenos</h5>
+
+          <a href="https://wa.me/1234567890" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-whatsapp mt-2 mb-3"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <a href="https://www.facebook.com/tuusuario" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-facebook"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <a href="https://www.instagram.com/tuusuario" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-instagram"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <a href="https://twitter.com/tuusuario" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-x-twitter"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <p class="mb-0">© 2025 Todos los derechos reservados.</p>
+          <p>Desarrollado con 💻 por Laura Agudelo - Martin Osorio - Laura
+            Bermudez</p>
+        </div>
+      </footer>
+
+    </div>
+
+    <script>
+  const container = document.querySelector('.particles-container');
+  for (let i = 0; i < 80; i++) {
+    const particle = document.createElement('div');
+    particle.style.left = `${Math.random() * 100}%`;
+    particle.style.animationDuration = `${8 + Math.random() * 6}s`;
+    particle.style.animationDelay = `${Math.random() * 5}s`;
+    container.appendChild(particle);
+  }
+</script>
+
+    <script>
+      // Mostrar/ocultar el botón
+window.onscroll = function() {
+  const btn = document.getElementById("scrollToTopBtn");
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+
+// Función para subir
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+    </script>
+
+    <!-- script interactividad mapa -->
+    <script>
+  document.getElementById("svg-map").addEventListener("load", function () {
+    const svgDoc = this.contentDocument;
+    const infoCard = document.getElementById("infoCard");
+    const infoTitle = document.getElementById("infoTitle");
+    const infoDesc = document.getElementById("infoDesc");
+
+    const regionesInfo = {
+      "Antioquia": "Principal generador hidroeléctrico del país con proyectos como HidroItuango, sede de EPM.",
+      "Distrito Capital de Bogotá": "Centro político y económico del país.",
+      "Valle del Cauca": " Alta demanda y uso de biomasa para generación de energía eléctrica.",
+      "Meta": "Principal productor de petróleo y gas (Campo Rubiales); proyectos solares en zonas rurales, con apoyo de Ecopetrol.",
+      "La Guajira":"Mayor potencial eólico y solar del país; sede de proyectos como Alpha y Beta de Enel Green Power.",
+      "Huila":"Gran capacidad hidroeléctrica (El Quimbo); expansión solar en zonas rurales con iniciativas de Isagen y programas del gobierno.",
+      "Santander":"Fuente importante de gas y energía térmica; proyectos solares en desarrollo.",
+      "Tolima":"Alta producción hidroeléctrica (Amoyá, Prado); potencial solar en expansión con apoyo de Celsia.",
+      "Cundinamarca":"Alto consumo (Bogotá) y generación hidroeléctrica (Guavio); Enel Colombia opera centrales y promueve energías limpias.",
+      "Casanare":"Importante en petróleo y gas; uso creciente de energía solar en zonas sin red, con participación de Ecopetrol y UPME",
+      "Boyacá":"Importante en hidroeléctricas pequeñas y minería energética; proyectos solares rurales y programas de electrificación",
+      "Córdoba":"Generación térmica y potencial en solar; desarrollo de proyectos solares con apoyo de UPME.",
+      "Atlántico":"Nodo eléctrico del Caribe, con plantas térmicas (Termoflores) y parques solares en expansión promovidos por Enel y privados.",
+      "Cauca":"Sede de la hidroeléctrica Salvajina; creciente implementación de paneles solares rurales con apoyo de Celsia y proyectos del MinEnergía.",
+      "Risaralda":"Hidroeléctricas pequeñas (Machuelo) y expansión solar en comunidades rurales",
+      "Quindío":"Alta demanda por su crecimiento urbano y turístico; además de iniciativas de Celsia en energías limpias."
+      // Puedes añadir más nombres que aparecen en tu SVG
+    };
+
+    // Seleccionamos todos los elementos <path> del SVG
+    const paths = svgDoc.querySelectorAll("path");
+
+    paths.forEach(path => {
+      const regionName = path.getAttribute("title") || path.getAttribute("name") || path.id;
+
+      if (!regionName) return;
+
+      path.style.cursor = "pointer";
+
+      path.addEventListener("mouseenter", (e) => {
+        path.style.fill = "#7ED958"; // color al hacer hover
+        const nombre = regionName.replace("CO-", "");
+        infoTitle.textContent = nombre;
+        infoDesc.textContent = regionesInfo[nombre] || "Información no disponible.";
+        infoCard.style.display = "block";
+      });
+
+      path.addEventListener("mousemove", (e) => {
+        infoCard.style.left = e.clientX + 15 + "px";
+        infoCard.style.top = e.clientY + 15 + "px";
+      });
+
+      path.addEventListener("mouseleave", () => {
+        path.style.fill = "";
+        infoCard.style.display = "none";
+      });
+    });
+  });
+</script>
+
+    <!-- Script para la gráfica -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById('graficoEnergia').getContext('2d');
+      new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Hidroeléctrica', 'Térmica', 'Solar', 'Biomasa'],
+          datasets: [{
+            label: 'Distribución de Energía (%)',
+            data: [58, 36, 3.7, 2.6],
+           backgroundColor: [
+            '#4CAF50', // Hidroeléctrica (verde natural)
+            '#A1887F', // Térmica (tierra)
+            '#FFEB3B', // Solar (amarillo claro)
+            '#8BC34A'  // Biomasa (verde claro)
+],
+
+            borderColor: '#fff',
+            borderWidth: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            },
+            title: {
+              display: true,
+              text: 'Participación de fuentes de energía en Colombia (2024)',
+              font: { size: 18 }
+            }
+          }
+        }
+      });
+    </script>
+
+    <script>
+// Función para calcular la distancia Levenshtein entre dos cadenas
+function levenshtein(a, b) {
+const matrix = Array.from({ length: b.length + 1 }, (_, i) => [i]);
+for (let i = 0; i <= a.length; i++) matrix[0][i] = i;
+
+for (let i = 1; i <= b.length; i++) {
+for (let j = 1; j <= a.length; j++) {
+const cost = a[j - 1] === b[i - 1] ? 0 : 1;
+matrix[i][j] = Math.min(
+matrix[i - 1][j] + 1,       // eliminación
+matrix[i][j - 1] + 1,       // inserción
+matrix[i - 1][j - 1] + cost // sustitución
+);
+}
+}
+return matrix[b.length][a.length];
+}
+
+const form = document.querySelector("form");
+const input = document.querySelector("input[type='search']");
+const content = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6");
+
+form.addEventListener("submit", function (e) {
+e.preventDefault();
+const searchTerm = input.value.trim().toLowerCase();
+
+// Limpiar resaltados anteriores
+content.forEach(el => {
+el.innerHTML = el.innerText;
+});
+
+if (searchTerm === "") return;
+
+let firstMatch = null;
+
+content.forEach(el => {
+const words = el.innerText.split(/\s+/);
+let found = false;
+
+words.forEach((word, index) => {
+const cleanedWord = word.toLowerCase().replace(/[^a-z0-9áéíóúüñ]/gi, '');
+const distance = levenshtein(searchTerm, cleanedWord);
+
+if (!found && distance <= 2) { // tolerancia de hasta 2 errores
+const originalWord = words[index];
+words[index] = `<span class="highlight">${originalWord}</span>`;
+found = true;
+}
+});
+
+if (found) {
+el.innerHTML = words.join(" ");
+if (!firstMatch) firstMatch = el;
+}
+});
+
+if (firstMatch) {
+firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
+
+setTimeout(() => {
+content.forEach(el => {
+el.innerHTML = el.innerText;
+});
+}, 5000);
+}
+});
+</script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"></script>
+
+  </body>
+</html>

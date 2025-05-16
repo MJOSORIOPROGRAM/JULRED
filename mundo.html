@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo JULRED.jpeg">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Colombia en el Mundo</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Incluir Chart.js -->
+  </head>
+  <body>
+    <div class="container-fluid m-auto">
+      <!-- barra de navegación -->
+      <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid">
+          <a href="index.html"><img src="images/logo JULRED.jpeg" alt="logo"
+              width="90px" height="82px"
+              style="border-radius: 50%; margin-right: 20px;"></a>
+          <div class="d-lg-none text-center top-50 ">
+            <span class="fw-bold fs-4">Colombia en el mundo</span>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active"
+                  aria-current="page" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link active"
+                  href="contexto.html">Contexto Energético</a></li>
+              <li class="nav-item"><a class="nav-link active"
+                  href="colombia.html">Colombia</a></li>
+              <li class="nav-item"><a class="nav-link active"
+                  href="latam.html">Latam</a></li>
+              <li class="nav-item"><a class="nav-link active"
+                  href="mundo.html">Colombia en el mundo</a></li>
+              <li class="nav-item"><a class="nav-link active"
+                  href="evaluate.html">Evaluate</a></li>
+              <li class="nav-item"><a class="nav-link active"
+                  href="infografia.html">Infografía</a></li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search"
+                placeholder="Busca una palabra clave" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit"
+                style="background-color: #96ad71;">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="video-container mb-5">
+        <video autoplay muted loop playsinline
+          style="width: 100%; height: 42rem; object-fit: cover; margin-top: 20px;">
+          <source src="video/gif2.1.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Gráfica Comparativa -->
+      <div class="container p-5" id="garficacotrol">
+        <h2 class=" tituloGrafica text-center m-5">Consumo Energético - Comparativa</h2>
+        <canvas id="energyChart"></canvas>
+      </div>
+
+      <!-- Sección debajo de la gráfica -->
+      <div class="container my-5">
+        <h2 class=" tituloGrafica text-center mb-4">Impacto Ambiental y Energético</h2>
+        <div class="row">
+          <!-- Tarjeta 1 -->
+          <div class="col-md-4">
+            <div class="card-p">
+              <img src="images/imagen4.jpg" class="card-img-top"
+                alt="Impacto Ambiental Estados Unidos">
+              <div class="card-body">
+                <h5 class="card-title">Estados Unidos</h5>
+                <p class="card-text">Emisiones de CO2: ~15% global. Desafíos en
+                  deforestación, contaminación del aire y agua.</p>
+                <ul>
+                  <li>Emisiones de CO2 elevadas.</li>
+                  <li>Contaminación del aire en ciudades.</li>
+                  <li>Deforestación y pérdida de biodiversidad.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta 2 -->
+          <div class="col-md-4">
+            <div class="card-p">
+              <img src="images/imagen3.jpg" class="card-img-top"
+                alt="Impacto Ambiental China">
+              <div class="card-body">
+                <h5 class="card-title">China</h5>
+                <p class="card-text">Mayor emisor de CO2 con el 28% global.
+                  Problemas de contaminación del aire y desertificación.</p>
+                <ul>
+                  <li>Emisiones de CO2 más altas del mundo.</li>
+                  <li>Contaminación grave del aire.</li>
+                  <li>Desertificación en regiones norteñas.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta 3 -->
+          <div class="col-md-4">
+            <div class="card-p">
+              <img src="images/imagen2.jpg" class="card-img-top"
+                alt="Impacto Ambiental India">
+              <div class="card-body">
+                <h5 class="card-title">India</h5>
+                <p class="card-text">Emisiones de CO2: 7% global. Contaminación
+                  del aire y mala gestión de residuos.</p>
+                <ul>
+                  <li>Contaminación del aire elevada.</li>
+                  <li>Problemas de gestión de residuos.</li>
+                  <li>Crecimiento de las emisiones por el aumento de
+                    población.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button onclick="scrollToTop()" id="scrollToTopBtn" title="Subir">
+        ↑
+      </button>
+
+      <nav aria-label="Paginador de secciones" style="margin-top: 49px;">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="index.html">Inicio</a>
+          </li>
+          <li class="page-item"><a class="page-link"
+              href="contexto.html">1</a></li>
+          <li class="page-item"><a class="page-link"
+              href="colombia.html">2</a></li>
+          <li class="page-item"><a class="page-link"
+              href="latam.html">3</a></li>
+          <li class="page-item"><a class="page-link"
+              href="mundo.html">4</a></li>
+          <li class="page-item"><a class="page-link"
+              href="evaluate.html">5</a></li>
+          <li class="page-item"><a class="page-link"
+              href="infografia.html">6</a></li>
+        </ul>
+      </nav>
+
+           <footer class="position-relative  text-white py-4 mt-4"
+        style="background-color: #1a2913;">
+        <div
+          class="particles-container position-absolute top-0 start-0 w-100 h-100"></div>
+        <div class="container position-relative z-1 text-center">
+          <h5>JULRED - Siguenos</h5>
+
+          <a href="https://wa.me/1234567890" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-whatsapp mt-2 mb-3"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <a href="https://www.facebook.com/tuusuario" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-facebook"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <a href="https://www.instagram.com/tuusuario" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-instagram"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <a href="https://twitter.com/tuusuario" target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit;">
+            <i class="fa-brands fa-x-twitter"
+              style="font-size: 30px; padding: 4px;"></i>
+          </a>
+
+          <p class="mb-0">© 2025 Todos los derechos reservados.</p>
+          <p>Desarrollado con 💻 por Laura Agudelo - Martin Osorio - Laura
+            Bermudez</p>
+        </div>
+      </footer>
+    </div>
+
+      <script>
+  const container = document.querySelector('.particles-container');
+  for (let i = 0; i < 80; i++) {
+    const particle = document.createElement('div');
+    particle.style.left = `${Math.random() * 100}%`;
+    particle.style.animationDuration = `${8 + Math.random() * 6}s`;
+    particle.style.animationDelay = `${Math.random() * 5}s`;
+    container.appendChild(particle);
+  }
+</script>
+
+    <script>
+      // Mostrar/ocultar el botón
+window.onscroll = function() {
+  const btn = document.getElementById("scrollToTopBtn");
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+
+// Función para subir
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+    </script>
+
+    <script>
+      // Mostrar/ocultar el botón
+window.onscroll = function() {
+  const btn = document.getElementById("scrollToTopBtn");
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+
+// Función para subir
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+    </script>
+
+    <script>
+      // Configuración de la gráfica
+      const ctx = document.getElementById('energyChart').getContext('2d');
+      const energyChart = new Chart(ctx, {
+        type: 'bar', // Tipo de gráfico (barras)
+        data: {
+          labels: ['Colombia', 'Estados Unidos', 'China', 'Alemania', 'India'], // Etiquetas
+          datasets: [{
+            label: 'Consumo Energético (TWh)', // Nombre del conjunto de datos
+            data: [60, 4000, 6000, 1200, 1200], // Datos de consumo energético (en TWh)
+            backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de fondo de las barras
+            borderColor: 'rgba(54, 162, 235, 1)', // Color del borde de las barras
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
